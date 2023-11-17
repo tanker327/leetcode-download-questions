@@ -14,10 +14,10 @@ baseJSON = {
 graphQLEndpoint = 'https://leetcode.com/graphql'
 
 htmlstr = '<div>'
-htmlstr += '<style> @page { size: letter landscape; margin: 2cm; }\n * { word-wrap: break-word; } pre { white-space: pre-wrap; } </style>'
+htmlstr += '<style> @page { size: letter portrait; margin: 1cm; }\n * { word-wrap: break-word; } pre { white-space: pre-wrap; } body { font-size: 12px} </style>'
 
 def update_question_links(question_links):
-  with open('question_links.txt') as f:
+  with open('top-interview-150') as f:
     links =  f.read()
 
   links = links.split('\n')
@@ -64,7 +64,7 @@ def main():
   
   global htmlstr
   htmlstr += '</div>'
-  HTML(string=htmlstr).write_pdf('blind_75.pdf')
+  HTML(string=htmlstr).write_pdf('top-interview-150.pdf')
 
 
 if __name__=='__main__':
